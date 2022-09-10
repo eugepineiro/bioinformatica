@@ -13,9 +13,9 @@ def genbank_to_fasta(genbank_filename):
 
          #print(seq_record)
          print("ID: %s, Length: %i, with %i features" % (seq_record.id, len(seq_record), len(seq_record.features)))
-    filename = genbank_filename.split(".")[0] + ".fas"
-    count = SeqIO.convert(genbank_filename, "genbank", filename, "fasta")
-    print("Converted %i records" % count)
+    # filename = genbank_filename.split(".")[0] + ".fas"
+    # count = SeqIO.convert(genbank_filename, "genbank", filename, "fasta")
+    ##print("Converted %i records" % count)
 
     return seq_record.seq
 
@@ -57,7 +57,7 @@ def orf_finder(sequence:str):
 if __name__ == '__main__':
        
     try:
-        seq = genbank_to_fasta("sequence.gb")
+        seq = genbank_to_fasta("genbank/sequence.gb")
         ##seq to stirng
         seq = str(seq)
         
@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
         for i, orf in enumerate(orfs):
             #save orfs in a file
-            with open(f"orf{i}_{len(orf)}.fas" , "w") as f:
+            with open(f"fasta/orf{i}_{len(orf)}.fas" , "w") as f:
                 f.write(f">{i} Length {len(orf)}\n")
                 f.write(orf)
 
