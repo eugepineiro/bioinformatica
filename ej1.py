@@ -58,7 +58,7 @@ if __name__ == '__main__':
        
     try:
         seq = genbank_to_fasta("genbank/sequence.gb")
-        ##seq to stirng
+        ##seq to string
         seq = str(seq)
         
         orfs = orf_finder(seq)
