@@ -1,0 +1,284 @@
+CLUSTAL 2.1 multiple sequence alignment
+
+
+Cercocebus       ATGCCGCCCAAAACCCCCCGAAAAACG------ACCGCCGCCGCCGCTGCCGCGGAACCC
+0                ATGCCGCCCAAAACCCCCCGAAAAACGGCCGCCACCGCCGCCGCTGCCGCCGCGGAACCC
+Saimiri          ATGCCGCCCAAAATGCCCCGAAAAGCC------GCCGCCGCCGCTGCCGCCGCGGAACCC
+Galeopterus      ATGCCACCCAAAACCCCCCGAAGAGCG------GCCACAGCCGCCGCCGCCGCCGAACCC
+                 ***** *******  ******* * *        ** * ***** ** ***** ******
+
+Cercocebus       CCGGCACCGCCGCCGCCACCCCCTCCTGAGGAGGACCCAGAGCAGGACAGCGGTCCGGAG
+0                CCGGCACCGCCGCCGCCGCCCCCTCCTGAGGAGGACCCAGAGCAGGACAGCGGCCCGGAG
+Saimiri          CCAGCGCCACCGCCTCCGTCTTCTCCTGAGGAGGACCCAGAGCAGGACAGCGGCCCGGAG
+Galeopterus      CCGGCGCCGCCGCCGCCGCCCCCTCCTGAGGAGGACCCGGAGCAAGACAGTGGCCCCGAG
+                 ** ** ** ***** **  *  **************** ***** ***** ** ** ***
+
+Cercocebus       GACCTGCCTCTGGTCAGGCTTGAGTTTGAAGAAACCGAAGAACCTGATTTTACTGCGTTA
+0                GACCTGCCTCTCGTCAGGCTTGAGTTTGAAGAAACAGAAGAACCTGATTTTACTGCATTA
+Saimiri          GACCTGCCTCTGGTCAGGGTTGAGTTTGAAGAAACTGAAGAACCTGATTTTACTGCGTTA
+Galeopterus      GAGCTGCCTCTGGCCAGGCTTGAGTTTGAAGAAACCGAAGAACCTGATTTTACTACATTA
+                 ** ******** * **** **************** ****************** * ***
+
+Cercocebus       TGTCAGAAATTAAAGATACCAGATCATGTCAGAGAGAGAGCTTGGTTAACTTGGGAGAAA
+0                TGTCAGAAATTAAAGATACCAGATCATGTCAGAGAGAGAGCTTGGTTAACTTGGGAGAAA
+Saimiri          TGTCAGAGATTAAAGATACCAGATCATGTCAGAGAGAGAGCTTGGTTAACTTGGGAGAAA
+Galeopterus      TGTCAGAAATTAAAGATACCAGATCATGTCAGAGAAAGAGCTTGGTTAACTTGGGAGAAA
+                 ******* *************************** ************************
+
+Cercocebus       GTTTCATCTGTGGATGGAGTATTGG-----------------------------------
+0                GTTTCATCTGTGGATGGAGTATTGGGAGGTTATATTCAAAAGAAAAAGGAACTGTGGGGA
+Saimiri          GTTTCATCTGTGGATGGAGTATTGGGAGGTTATATTCAAAAGAAAAAGGAACTGTGGGGA
+Galeopterus      GTTTCATCTGTGGATGGAGTATTGGAAGGTTATATTCAAAAGAAAAAGGAACTGTGGGGT
+                 *************************                                   
+
+Cercocebus       ------------------------------------------------------------
+0                ATCTGTATCTTTATTGCAGCAGTTGACCTAGATGAGATGTCGTTCACTTTTACTGAGCTA
+Saimiri          ATCTGTATCTTTATTGCAGCAGTTGACCTAGATGAGATGCCGTTCACTTTTACTGAACTA
+Galeopterus      ATCTGTATCTTTACTGCAGCAGTTGACCTGGATGAGGTGACATTCACTTTTACTGAGCTA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CAGAAAAACATAGAAATCAGTGTCCATAAATTCTTTAACTTACTAAAAGAAATTGATACC
+Saimiri          CAGAAAATCATAGAAATCAGTGTCTTTAAATTCTTTGACTTATTAAAAGAAATTGATACC
+Galeopterus      CAGAAAAACATAGAAACCAGTGTCTATAAATTCTTTGACTTACTAAAGGAAATTGATACC
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                AGTACCAAAGTTGATAATGCTATGTCAAGACTGTTGAAGAAGTATGATGTATTGTTTGCA
+Saimiri          AGTACCAAAGTTGATAATGCTATGTCAAGACTGTTGAAGAAGTATAATGTATTATTGGCA
+Galeopterus      AGTACCAAAGTTGATAATGCTATGTCAAGACTGTTGAAGAAGTACAATGTATTGTGTGCA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CTCTTCAGCAAATTGGAAAGGACATGTGAACTTATATATTTGACACAACCCAGCAGTTCG
+Saimiri          CTCTTCAGCAAATTAGAAAGGACATGTGAACTTATATATTTGACACAACCCAACAGTTCG
+Galeopterus      CTCTATAGCAAATTAGAAAGGACATGTGAACTTATATATTTGACACAACCCAGCAGTTCA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ATATCTACTGAAATAAATTCTGCATTGGTGCTAAAAGTTTCTTGGATCACATTTTTATTA
+Saimiri          ATATCTACTGAGATAAATTCTGCATTGGTGCTAAAAGTTTCTTGGATCACATTTTTATTA
+Galeopterus      ATATCTGCTGAAATAAATTCTGCCTTGGTGCTAAAAGTTTCTTGGATCACATTTTTACTA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                GCTAAAGGGGAAGTATTACAAATGGAAGATGATCTGGTGATTTCATTTCAGTTAATGCTA
+Saimiri          GCTAAAGGGGAAGTATTACAAATGGAAGATGATCTGGTGATTTCATTTCAGTTAATGCTA
+Galeopterus      GCTAAAGGGGATGTATTACAAATGGAAGATGATCTGGTGATTTCATTTCAGTTAATGCTG
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                TGTGTCCTTGACTATTTTATTAAACTCTCACCTCCCATGTTGCTCAAAGAACCATATAAA
+Saimiri          TGTGTCCTTGACTATTTTATTAAACTCTCACCTCCTGTGTTGCTCAAAGAACCATATAAA
+Galeopterus      TGTGTTCTTGACTATTTTATCAAACTTTCACCTCCTGCATTGCTCAAAGAACCATACAAA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ACAGCTGTTATACCCATTAATGGTTCACCTCGAACACCCAGGCGAGGTCAGAACAGGAGT
+Saimiri          ACAGCTGTTATACCCGTTAATGGTTCACCTCGAACACCCAGGCGAGGTCAGAACAGGAGT
+Galeopterus      ACAGCTGTAATACCCATTAATGGTTCACCTCGAACACCCAGGCGAGGTCAGAACAGGAGT
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                GCACGGATAGCAAAACAACTAGAAAATGATACAAGAATTATTGAAGTTCTCTGTAAAGAA
+Saimiri          GCACGGATAGCCAAACAACTAGAAAATGATACAAGAATTATTGAAATTCTCTGTAAAGAA
+Galeopterus      GCACGGATAGCAAAACAACTAGAAAATGATACAAGAATTATTGAAGTTCTCTGTAAAGAA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CATGAATGTAATATAGATGAGGTGAAAAATGTTTATTTCAAAAATTTTATACCTTTTATG
+Saimiri          CATGAATGTAATATAGATGAGGTGAAAAATGTTTATTTAAAAAATTTTATACCTTTTATG
+Galeopterus      CATGAATGTAATATGGATGAGGTGAAAAATGTTTATTTCAAAAATTTTATACCTTTTATG
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                AATTCTCTTGGACTTGTAACATCTAATGGACTTCCAGAGGTTGAAAATCTTTCTAAACGA
+Saimiri          AATTCTCTTGGACTTGTAACATCTAATGGACTTCCAGAGGTTGAAAGTCTGTCTAAACGA
+Galeopterus      AATTCTCTTGGAATTGTGGCTTCTAATGGACTTCCAGAGGTTGAAAGCCTCTCTAAACGA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                TACGAAGAAATTTATCTTAAAAATAAAGATCTAGATGCAAGATTATTTTTGGATCATGAT
+Saimiri          TACGAAGAAATTTATCTTAAAAATAAAGATCTAGATGCAAGATTATTTTTGGATCATGAT
+Galeopterus      TATGAAGAAGTTTATCTTAAAAACAAAGATCTAGATGCAAGATTATTTTTGGATCATGAC
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                AAAACTCTTCAGACTGATTCTATAGACAGTTTTGAAACACAGAGAACACCACGAAAAAGT
+Saimiri          AAAACTCTTCAGACTGATTCTATAGACAGTTTTGAAGCACAGAGAACACCACGAAAAAGT
+Galeopterus      AAAACTCTTCAGACGGATCCTATGGACAGTTTTGAACCACAGAGAACACCACGAAAAATT
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                AACCTTGATGAAGAGGTGAATGTAATTCCTCCACACACTCCAGTTAGGACTGTTATGAAC
+Saimiri          AACCTTGATGAAGAGGTGAATGTGATTTCTCCACACACTCCAGTTAGGACTGTTATGAAC
+Galeopterus      AACCCTGATGAAGAGGTGAATGCAATTCCTCCACACACTCCAGTTAGGACTGTTATGAAT
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ACTATCCAACAATTAATGATGATTTTAAATTCAGCAAGTGATCAACCTTCAGAAAATCTG
+Saimiri          ACTATCCAACAATTAATGATGATTTTAAATTCAGCAAGTGATCAGCCATCAGAAAATCTG
+Galeopterus      ACTATCCAACAATTAATGATGATTTTAAATTCAGCAAATGATCAACCATCAGAAAATCTG
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ATTTCCTATTTTAACAACTGCACAGTGAATCCAAAAGAAAGTATACTGAAAAGAGTGAAG
+Saimiri          ATTTCCTATTTTAACAACTGCACAGTTAATCCAAAAGAAAGTATTTTGAAAAGAGTGAAG
+Galeopterus      ATTTCCTATTTTAATAATTGCACAGTGAATCCAAAAGAAAGTATCCTGAAAAGAGTGAAG
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                GATATAGGATACATCTTTAAAGAGAAATTTGCTAAAGCTGTGGGACAGGGTTGTGTCGAA
+Saimiri          GATATTGGATACATCTTTAAAGAGAAATTTGCTGAAGCTGTGGGACAGGGATGTGTTGAA
+Galeopterus      GATATTGGATACATCTTTAAAGAGAAATTTGCTAAAGCTGTGGGACAGGGATGTGTTGAA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ATTGGATCACAGCGATACAAACTTGGAGTTCGCTTGTATTACCGAGTAATGGAATCCATG
+Saimiri          ATTGGATCACAGCGATACAAACTTGGAGTTCGCTTGTATTACCGAGTAATGGAATCCATG
+Galeopterus      ATTGGATCACAGAGATACAAACTCGGAGTCCGTTTGTATTACCGAGTAATGGAATCCATG
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CTTAAATCAGAAGAAGAACGATTATCCATTCAAAATTTTAGCAAACTTCTGAATGACAAC
+Saimiri          CTTAAATCAGAAGAAGAACGATTATCCATTCAAAATTTTAGCAAACTTCTAAACGACAGC
+Galeopterus      CTTAAATCAGAAGAAGAAAGATTATCTGTTCAAAATTTTAGCAAACTTCTGAATGACAAC
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ATTTTTCATATGTCTTTATTGGCGTGCGCTCTTGAGGTTGTAATGGCCACATATAGCAGA
+Saimiri          ATTTTTCATATGTCTTTATTGGCGTGTGCTCTTGAGGTTGTAATGGCCACATATAGCAGA
+Galeopterus      ATCTTTCATATGTCTTTATTGGCCTGTGCTCTTGAGGTTGTAATGGCTACATATAGCAGA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                AGTACATCTCAGAATCTTGATTCTGGAACAGATTTGTCTTTCCCATGGATTCTGAATGTG
+Saimiri          AGCACTTCCCAGAATCTTGATTCTGGAACAGATTTGTCCTTCCCATGGATTCTGAATGTG
+Galeopterus      AGTACATCTCAGAATCTTGATTCTGGAACAGATTTATCCTTCCCATGGATTCTGAATGTA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CTTAATTTAAAAGCCTTTGATTTTTACAAAGTGATCGAAAGTTTTATCAAAGCAGAAGGC
+Saimiri          CTTAATTTAAAAGCCTTTGATTTTTACAAAGTGATTGAAAGTTTTATCAAAGCAGAAGGC
+Galeopterus      CTTAATTTAAAAGCCTTTGATTTTTACAAAGTGATTGAAAGTTTTATCAAAGCAGAAGCC
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                AACTTGACAAGAGAAATGATAAAACATTTAGAACGATGTGAACATCGAATCATGGAATCC
+Saimiri          ACCTTGACAAGAGAAATGATAAAACATTTAGAACGATGTGAACATCGAATCATGGAATCC
+Galeopterus      AACTTGACAAGAGAAATGATAAAACATTTAGAGCGATGTGAACATCGAATCATGGAATCC
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CTTGCATGGCTCTCAGATTCACCTTTATTTGATCTTATTAAACAATCAAAGGACCGAGAA
+Saimiri          CTTGCGTGGCTCTCAGATTCACCTTTATTTGATCTTATTAAACAATCAAAGGACCGAGAA
+Galeopterus      CTTGCATGGCTCTCAGATTCACCTTTATTTGACCTTATTAAACAATCAAAGGACAGAGAA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                GGACCAACTGATCACCTTGAATCTGCTTGTCCTCTTAATCTTCCTCTCCAGAATAATCAC
+Saimiri          GGACCAACTGATCACCTTGAATCTGCTTGTCCTCTTAATGTTGCTCTCCAGAATAATCAC
+Galeopterus      GGACCAGCTGATCATCTTGATTCTGCTTGTCCTCTCAATCTTCCTCTACAGAATAATCAC
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ACTGCAGCAGATATGTATCTTTCTCCTGTAAGATCTCCAAAGAAAAAAGGTTCAACTACG
+Saimiri          ACTGCAGCAGATATGTATCTTTCTCCTGTAAGATCCCCAAAGAAAAAAGGTTCAGCTACA
+Galeopterus      ACTGCTGCAGATATGTATCTTTCTCCTGTAAGATCCCCAAAGAAAAAAGGTTCAGCTGCA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CGTGTAAATTCTACTGCAAATGCAGAGACACAAGCAACCTCAGCCTTCCAGACCCAGAAG
+Saimiri          CGTGTAAATTCTACTGCAAATGCAGAGACACAAGCAACCTCAGCCTTCCAGACCCAGAAG
+Galeopterus      CGTGTAAATTCT---GCAAATGTGGAGACACAACCAACTTCAGCCTTCCAGACTCAGAAG
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CCATTGAAATCTACCTCTCTTTCACTGTTTTATAAAAAAGTGTATCGGCTAGCCTATCTC
+Saimiri          CCATTGAAATCTACCTCTCTTTCACTGTTTTATAAAAAAGTGTATCGGCTAGCTTATCTC
+Galeopterus      CCATTAAAATCTACCTCCCTTTCACTGTTTTACAAAAAAGTGTACAGGCTAGCATATCTC
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CGGCTAAATACACTTTGTGAACGCCTTCTGTCTGAGCACCCAGAATTAGAACATATCATC
+Saimiri          CGGCTAAATACGCTGTGTGAACGCCTTCTGTCTGAGCACCCAGAACTAGAGCATATCATC
+Galeopterus      CGACTAAATACCCTATGTGCACGCCTTCTGTCTGACCACCCAGAACTAGAACACATCATC
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                TGGACCCTTTTCCAGCACACCCTGCAGAATGAGTATGAACTCATGAGAGACAGGCATTTG
+Saimiri          TGGACCCTTTTCCAGCACACGCTGCAGAATGAATATGAACTTATGAGAGACAGGCATTTG
+Galeopterus      TGGACCCTTTTCCAGCACACACTACAAAATGAATACGAACTCATGAGAGATAGGCACCTG
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                GACCAAATTATGATGTGTTCCATGTATGGCATATGCAAAGTGAAGAATATAGACCTTAAA
+Saimiri          GACCAAATTATGATGTGTTCCATGTATGGCATATGCAAAGTGAAGAATATAGACCTTAAA
+Galeopterus      GACCAGATTATGATGTGTTCCATGTACGGCATGTGCAAAGTGAAGAATATAGACCTTAAA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                TTCAAAATCATTGTAACAGCATACAAGGATCTTCCTCATGCTGTTCAGGAGACATTCAAA
+Saimiri          TTCAAAATCATTGTAACAGCATACAAAGATCTTCCTCATGCTGTTCAGGAGACTTTCAAA
+Galeopterus      TTCAAAATCATTGTAACAGCATACAAGGATCTTCCTCATGCTGTTCAGGAGACATTCAAA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CGTGTTTTGATCAAAGAAGAGGAGTATGATTCTATTATAGTATTCTATAACTCGGTCTTC
+Saimiri          CGTGTTTTGATCAAAGAAGAGGAGTATGATTCTATTATAGTATTCTATAACTCAGTCTTC
+Galeopterus      CGTGTTTTGATCAGAGAAGAGGAGTATGATTCCATTATAGTATTCTATAACTCGGTCTTC
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ATGCAGAGACTGAAAACAAATATTTTGCAGTATGCTTCCACCAGGCCCCCTACCTTGTCA
+Saimiri          ATGCAGAGACTGAAAACAAATATTTTGCAGTATGCTTCCACCAGGCCCCCTACCTTGTCA
+Galeopterus      ATGCAGAGACTGAAAACAAATATTTTGCAGTATGCTTCCACCAGGCCCCCTACCTTGTCA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CCAATACCTCACATTCCTCGAAGCCCTTACAAGTTTCCTAGTTCACCCTTACGGATTCCT
+Saimiri          CCAATACCTCACATTCCTCGAAGCCCTTACAAGTTTCCTAGTTCACCCTTACGGATTCCT
+Galeopterus      CCAATACCTCACATTCCTCGAAGCCCTTACAAGTTTTCTAGTTCACCCTTACGGATTCCT
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                GGAGGGAACATCTATATTTCACCCCTGAAGAGTCCATATAAAATTTCAGAAGGTCTGCCA
+Saimiri          GGAGGGAACATCTATATATCACCCCTGAAGAGTCCATATAAAATTTCAGAAGGTCTGCCA
+Galeopterus      GGGGGGAACATATATATATCACCCCTGAAGAGTCCATATAAAATTTCAGAAGGTCTGCCA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ACACCAACAAAAATGACTCCAAGATCAAGAATCTTAGTATCAATTGGTGAATCATTCGGG
+Saimiri          ACACCAACAAAAATGACTCCAGGAACAAGAATCTTAGTATCAATTGGTGAATCATTTGGG
+Galeopterus      ACACCAACAAAAATGACTCCAAGATCAAGAATCTTAGTATCAATTGGTGAATCATTTGGG
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                ACTTCTGAGAAGTTCCAGAAAATAAATCAGATGGTATGTAACAGCGACCGTGTGCTCAAA
+Saimiri          ACTTCTGAGAAGTTCCAGAAAATAAATCAGATGGTTTGTAACAGTGACCGTGTGCTCAAA
+Galeopterus      ACTTCTGAGAAGTTCCAGAAAATAAATCAGATGGTATGTAACAGTGACCGTGTACTCAAA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                AGAAGTGCTGAAGGAAGCAACCCTCCTAAACCACTGAAAAAACTACGCTTTGATATTGAA
+Saimiri          AGAAGCGCTGAAGGAAGCAACCCTCCTAAACCGCTGAAAAAACTACGCTTTGATATCGAA
+Galeopterus      AGAAGTGCTGAAGGAAGCAACCCTCCTAAACCACTGAAAAAACTACGCTTTGATATTGAA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                GGATCAGATGAAGCAGATGGAAGTAAACATCTCCCAGGAGAGTCCAAATTTCAGCAGAAA
+Saimiri          GGATCAGATGAAGCAGATGGAAGTAAACACCTCCAAGGGGAGTCCAAATTTCAGCAGAAA
+Galeopterus      GGATCAGATGAAGCAGATGGAAGTAAACATCTCCCGGGGGAGTCCAAATTTCAACAGAAA
+                                                                             
+
+Cercocebus       ------------------------------------------------------------
+0                CTGGCAGAAATGACTTCTACTCGAACACGAATGCAAAAGCAGAAAATGAATGATAGCATG
+Saimiri          CTGGCAGAAATGACATCTACTCGAACACGAATGCAAAAGCAGAAAATGAATGACAGCATG
+Galeopterus      CTGGCAGAAATGACATCTACTCGAACACGAATGCAAAAGCAGAAAATGAATGATAGCATG
+                                                                             
+
+Cercocebus       ---------------------------
+0                GATACCTCAAACAAGGAAGAGAAATGA
+Saimiri          GATACCTCAAACAAGGAAGAAAAATGA
+Galeopterus      GATACCTCAAACAAGGAAGAAAAGTGA
+                                            
