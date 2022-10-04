@@ -1,6 +1,5 @@
 from Bio.Align.Applications import ClustalwCommandline
-clustalw_exe = "./clustalw2"
-in_file = "./multipleNoGaps.fasta"
-out_file = "./alignedClustalNoGaps.fasta"
-clustalw_cline = ClustalwCommandline(clustalw_exe, infile=in_file, outfile=out_file)
+in_file = "./multiplep.fasta"
+out_file = "./alignedClustal.fasta"
+clustalw_cline = ClustalwCommandline("clustalw2",infile=in_file, outfile=out_file)
 clustalw_cline()

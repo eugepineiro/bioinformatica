@@ -1,13 +1,13 @@
 # Procesamiento de Secuencias 
-from ast import Return
-from Bio import SeqIO, AlignIO, Seq
-from pprint import pprint
+from Bio import SeqIO
+import os
 
 CODON_LEN = 3
 STOP_CODONS = ["TAA", "TAG", "TGA"]
 START_CODON = "ATG"
 
 def genbank_to_fasta(genbank_filename):
+
 
     for seq_record in SeqIO.parse(genbank_filename, "genbank"):
 
@@ -57,23 +57,28 @@ def orf_finder(sequence:str):
 if __name__ == '__main__':
        
     try:
-        seq = genbank_to_fasta("genbank/sequence.gb")
-        ##seq to string
-        seq = str(seq)
+
+        records =  SeqIO.parse("genbank/seq_multiple.gb", "genbank")
+
+        #seq = genbank_to_fasta("genbank/sequence.gb")
+        ##seq to stirng
         
-        orfs = orf_finder(seq)
+        
+        for record in records:
 
-        for i, orf in enumerate(orfs):
-            #save orfs in a file
-            with open(f"fasta/orf{i}_{len(orf)}.fas" , "w") as f:
-                f.write(f">{i} Length {len(orf)}\n")
-                f.write(orf)
+            seq = str(record.seq)
+            
+            orfs = orf_finder(seq)
+            dir_name = f"orf/{record.id}/"
+            os.makedirs(dir_name, exist_ok=True)
+            for i, orf in enumerate(orfs):
+
+                #save orfs in a file
+                with open(f"{dir_name}orf{i}_{len(orf)}.fas" , "w") as f:
+                    f.write(f">{i} Length {len(orf)}\n")
+                    f.write(orf)
 
 
-        pprint(orfs)
-        orfs.sort(key= len, reverse=True)
-        pprint(list(map(len, orfs)))
-        ##pprint()
     except Exception as e:
         print(e)
 
