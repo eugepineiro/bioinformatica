@@ -48,3 +48,6 @@ RUN mv ncbi-blast-2.13.0+/bin/* /usr/local/bin/
 
 #make blast db
 RUN "makeblastdb" -in swissprot -dbtype prot
+
+#install emboss
+RUN apt-get install -y emboss
