@@ -9,6 +9,19 @@ orf_directory = "orf/NM_000321.3/"
 protein_directory = "protein/orf/NM_000321.3/"
 os.makedirs(protein_directory, exist_ok=True)
 
+def online_blastn_old(file):
+    print("online blastn for " + file)
+    #open file
+    with open(orf_directory + file, "r") as f:
+        #read file
+        seq = f.read()
+        #blast seq
+        result = NCBIWWW.qblast("blastn", "nt", seq)
+        #save blast result
+        with open("blast/nuc_" + file + ".xml", "w") as f:
+            f.write(result.read())#iterate over dir
+
+
 def online_blastn(file):
 
     seq = SeqIO.read(orf_directory + file, format="fasta")
@@ -34,7 +47,7 @@ def local_blastp(file):
     with open(path, "w") as f:
         f.write(f">{record.id}\n")
         f.write(seqprot.__str__())
-    command = f'blastp -query {path} -db /root/swissprot -outfmt 5 -out blast/{file}.xml'
+    command = f'blastp -query {path} -db /root/swissprot -outfmt 5 -out blast/{name}.xml'
 
     os.system(command)
 
@@ -58,5 +71,5 @@ def run_blast(target):
 
 if __name__ == '__main__':
 
-    run_blast(local_blastp)
+    run_blast(online_blastn_old)
     
