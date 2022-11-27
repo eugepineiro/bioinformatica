@@ -40,6 +40,20 @@ python3 ./ej1.py --input genbank/sequence.gb --output "orfs"
 ### BLAST 
 
 Para ejecutar la consulta de BLAST y obtener los 6 marcos de lectura ejecutar: 
+
+```
+usage: ej2.py [-h] --input path/to/file [--output path/to/file] [--method blastn|blastp]
+
+Executes BLAST query using NCBI database
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input path/to/file  path to the sequence to BLAST
+  --output path/to/file path to folder to save BLAST output in .xml format. Defaults to create a /blast_output folder
+  --method blastn|blastp execute blastn or blastp. Defaults to blastn, blastp requires local swissprot database
+
+```
+Ejemplo de ejecución
 ```
 python3 ./ej2.py --input multiple.fas 
 ```
