@@ -86,3 +86,24 @@ Ejemplo de ejecución
 ```
 python3 ./ej4.py --input blast/nuc_orf0_2787.fas.xml --pattern homo
 ```
+
+### Emboss 
+Ejectuar distitos comandos de emboss
+```
+usage: ej5.py [-h] --input file.fas [--output filename] --method {orf_prot,orf_nt,translate,motifs,all}
+
+Execute Emboss methods
+  
+  --input file.fas      input sequence file (.fas)
+  --method {orf_prot,orf_nt,translate,motifs,all}
+                        emboss method to execute: orf_prot finds ORF and saves them as protein sequences orf_nt saves them as nucleotide sequences translate translates sequence (.pep)
+                        motifs executes domain analysis (.patmatmotifs)
+
+optional arguments:
+    -h, --help            show this help message and exit
+  --output filename     path to save result
+```
+Ejemplo de ejecución
+```
+python3 ./ej5.py --input fasta/sequence.fas --method orf_prot --output test_prote
+```
