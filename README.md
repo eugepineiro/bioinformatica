@@ -68,3 +68,21 @@ Para ejectuar Multiple Sequence Alignment con Clustawl ejecutar
 ```
 python3 ./ej3.py --algorithm clustawl 
 ```
+
+### Pattern Matching 
+Buscar un patrón dentro de un resultado de BLAST
+
+```
+usage: ej2.py [-h] --input file.xml --pattern pattern
+
+Search pattern in blast output xml file
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --input file.xml   xml input file to search pattern
+  --pattern pattern  pattern to search
+```
+Ejemplo de ejecución
+```
+python3 ./ej4.py --input blast/nuc_orf0_2787.fas.xml --pattern homo
+```
