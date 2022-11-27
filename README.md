@@ -24,9 +24,19 @@ pip install requeriments.txt
 
 Para leer una o múltiples secuencias de nucleótidos de un archivo en formato Genbank (input.gb) y guardaarlas en un archivo FASTA. (output.fas)
 ```
-python3 ./ej1.py --input file.gb --output output.fas
-```
+usage: ej1.py [-h] --input file.gb [--output path/to/file]
 
+Reads one or multiple nucleotide sequences in genbank format (.gb) and saves them in fasta format (.fas)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input file.gb       path to GENBANK input file (.gb)
+  --output path/to/file path to save FASTA output file. Defaults to create a /orf folder
+```
+Ejemplo de ejecución
+```
+python3 ./ej1.py --input genbank/sequence.gb --output "orfs"
+```
 ### BLAST 
 
 Para ejecutar la consulta de BLAST y obtener los 6 marcos de lectura ejecutar: 

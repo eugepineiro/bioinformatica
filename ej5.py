@@ -1,7 +1,6 @@
 import argparse
 import os
 
-
 #argparse with optional input file and pattern
 parser = argparse.ArgumentParser()
 parser.add_argument("--input", help="input file", type=str, default="fasta/sequence.fas", required=False)

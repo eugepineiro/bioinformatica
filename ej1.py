@@ -1,7 +1,10 @@
-# Procesamiento de Secuencias 
+# Sequence Processing
 from Bio import SeqIO
 import os
+import argparse
+import sys
 
+PROGRAM_ARGUMENTS = 1
 CODON_LEN = 3
 STOP_CODONS = ["TAA", "TAG", "TGA"]
 START_CODON = "ATG"
@@ -11,15 +14,9 @@ def genbank_to_fasta(genbank_filename):
 
     for seq_record in SeqIO.parse(genbank_filename, "genbank"):
 
-         #print(seq_record)
          print("ID: %s, Length: %i, with %i features" % (seq_record.id, len(seq_record), len(seq_record.features)))
-    # filename = genbank_filename.split(".")[0] + ".fas"
-    # count = SeqIO.convert(genbank_filename, "genbank", filename, "fasta")
-    ##print("Converted %i records" % count)
 
     return seq_record.seq
-
-
 
 
 def find_codon(seq_record, start, codons):
@@ -55,32 +52,36 @@ def orf_finder(sequence:str):
     return orfs
 
 if __name__ == '__main__':
-       
+    
+    # Parse arguments 
+    parser = argparse.ArgumentParser(prog="ej1.py", description="Reads one or multiple nucleotide sequences in genbank format (.gb) and saves them in fasta format (.fas)")
+    parser.add_argument("--input", help="path to GENBANK input file (.gb)", type=str,  metavar="file.gb", required=True)
+    parser.add_argument("--output", help="path to save FASTA output file. Defaults to create a /orf folder", type=str, metavar="path/to/file", default="orf", required=False)
+    args = parser.parse_args()
+    
     try:
+        records =  SeqIO.parse(args.input, "genbank") # Parse genbank file
+    except OSError as e:
+        raise Exception(f"Unable to open {args.input}: {e}")
+    except ValueError:
+        raise Exception(f"Can not read {args.input} as .gb format")
 
-        records =  SeqIO.parse("genbank/seq_multiple.gb", "genbank")
+    # Find ORF for each record in multiple fasta file
+    for record in records:
 
-        #seq = genbank_to_fasta("genbank/sequence.gb")
-        ##seq to stirng
+        seq = str(record.seq)
         
-        
-        for record in records:
+        orfs = orf_finder(seq)
 
-            seq = str(record.seq)
-            
-            orfs = orf_finder(seq)
-            dir_name = f"orf/{record.id}/"
-            os.makedirs(dir_name, exist_ok=True)
-            for i, orf in enumerate(orfs):
+        if len(orfs) == 0: 
+            print("No ORFs found")
+            exit()
 
-                #save orfs in a file
-                with open(f"{dir_name}orf{i}_{len(orf)}.fas" , "w") as f:
-                    f.write(f">{i} Length {len(orf)}\n")
-                    f.write(orf)
+        # Save orfs in a file
+        dir_name = f"{args.output}/{record.id}/"
+        os.makedirs(dir_name, exist_ok=True)        
+        for i, orf in enumerate(orfs):
 
-
-    except Exception as e:
-        print(e)
-
-
-        
+            with open(f"{dir_name}orf{i}_{len(orf)}.fas" , "w") as f:
+                f.write(f">{i} Length {len(orf)}\n") # Create sequence ID
+                f.write(orf)        

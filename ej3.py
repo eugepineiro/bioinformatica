@@ -6,9 +6,9 @@ def msa():
     #align = list(AlignIO.parse("fasta/seq_multiple.fas", "fasta"))
 
     #input_handle = open("test.fasta", "r")
-    output_handle = open("msa.fasta", "w")
+    output_handle = open("msa/aligned_multipleGaps.fasta", "w")
 
-    alignments = list(AlignIO.parse("test.fasta", "fasta"))
+    alignments = list(AlignIO.parse("msa/multipleGaps.fasta", "fasta"))
 
 
 
