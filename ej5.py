@@ -12,21 +12,24 @@ def get_orf(method):
     try:
         os.system(f"getorf -sequence {args.input} -outseq {args.output}.orf -find {method.value}")  
     except:
-        raise Exception("Failed to excute getorf emboss command. Make sure it's installed")           
+        print("Error: Failed to excute getorf emboss command. Make sure it's installed")
+        exit(1)           
 
 def translate():
     print("Translating sequence")
     try:
         os.system(f"transeq -sequence {args.input} -outseq {args.output}.pep")    
     except:
-        raise Exception("Failed to excute transeq emboss command. Make sure it's installed")                     
+        print("Error: Failed to excute transeq emboss command. Make sure it's installed")
+        exit(1)                     
 
 def get_motifs():
     print("Finding motifs")
     try:
         os.system(f"patmatmotifs -sequence {args.input} -outfile {args.output}.patmatmotifs")   
     except:
-        raise Exception("Failed to excute patmatmotifs emboss command. Make sure it's installed")         
+        print("Error: Failed to excute patmatmotifs emboss command. Make sure it's installed")
+        exit(1)         
 
 if __name__ == '__main__':
 

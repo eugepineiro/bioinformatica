@@ -11,7 +11,6 @@ START_CODON = "ATG"
 
 def genbank_to_fasta(genbank_filename):
 
-
     for seq_record in SeqIO.parse(genbank_filename, "genbank"):
 
          print("ID: %s, Length: %i, with %i features" % (seq_record.id, len(seq_record), len(seq_record.features)))
@@ -62,10 +61,11 @@ if __name__ == '__main__':
     try:
         records =  SeqIO.parse(args.input, "genbank") # Parse genbank file
     except OSError as e:
-        raise Exception(f"Unable to open {args.input}: {e}")
+        print(f"Error: Unable to open {args.input}: {e}")
+        exit(1)
     except ValueError:
-        raise Exception(f"Can not read {args.input} as .gb format")
-
+        print(f"Error: Can not read {args.input} as .gb format")
+        exit(1)
     # Find ORF for each record in multiple fasta file
     for record in records:
 

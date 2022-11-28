@@ -62,11 +62,11 @@ python3 ./ej2.py --input multiple.fas
 
 Para ejectuar Multiple Sequence Alignment con Muscle ejecutar:
 ```
-python3 ./ej3.py --algorithm muscle 
+./ej3.py --input msa/multipleGaps.dnd --output msa/alignedmultipleGapsMuscle --method muscle 
 ```
 Para ejectuar Multiple Sequence Alignment con Clustawl ejecutar
 ```
-python3 ./ej3.py --algorithm clustawl 
+./ej3.py --input msa/multipleGaps.dnd --output msa/alignedmultipleGapsMuscle --method clustalw 
 ```
 
 ### Pattern Matching 

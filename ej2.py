@@ -24,15 +24,16 @@ def online_blastn(file):
     try:
         seq = SeqIO.read(args.input + file, format="fasta") # Read sequence
     except OSError as e:
-        raise Exception(f"Unable to open {args.input}: {e}")
+        print(f"Error: Unable to open {args.input}: {e}")
+        exit(1)
     except ValueError:
-        raise Exception(f"Can not read {args.input}")
-    
+        print(f"Error: Can not read {args.input}")
+        exit(1)
     try: 
         result = NCBIWWW.qblast("blastn", "nt", seq.seq) # Execute BLASTN to NCBI
     except: 
-        raise Exception("NCBI Remote blastn failed")
-
+        print("Error: NCBI Remote blastn failed")
+        exit(1)
     # Save blast result for each ORF
     file = file.split(".")[0]
     with open(f"{args.output}{file}.xml", "w") as f:
@@ -44,9 +45,11 @@ def local_blastp(file):
     try:
         record = SeqIO.read(args.input + file, format="fasta")# Read sequence
     except OSError as e:
-        raise Exception(f"Unable to open {args.input}: {e}")
+        print(f"Error: Unable to open {args.input}: {e}")
+        exit(1)
     except ValueError:
-        raise Exception(f"Can not read {args.input} in fasta format")
+        print(f"Error: Can not read {args.input} in fasta format")
+        exit(1)
     
     seqprot = record.seq.translate(stop_symbol="")
 
@@ -63,7 +66,8 @@ def local_blastp(file):
     try: 
         os.system(command) 
     except:
-        raise Exception("Local BLASTP failed. Please make sure you've got swissprot database installed")
+        print("Error: Local BLASTP failed. Please make sure you've got swissprot database installed")
+        exit(1)
 
 def run_blast(target):
     
@@ -95,7 +99,7 @@ if __name__ == '__main__':
     elif args.method == "blastp": 
         target=local_blastp
     else: 
-        raise Exception("Please enter a blastp or blastn method")
-
+        print("Please enter a blastp or blastn method")
+        exit(1)
     print(f"Starting {args.method} with {args.input}")
     run_blast(target)

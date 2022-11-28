@@ -4,16 +4,25 @@ import argparse
 
 def find_pattern(file, pattern):
 
-    print(f"Searching for pattern {pattern} in {file}")
+    print(f"Searching for pattern {pattern} in {file}...")
 
     #Parse XML file
     try:
         tree = ET.parse(file)
     except OSError as e:
-        raise Exception(f"Unable to open {file}: {e}")
+        print(f"Error: Unable to open {file}: {e}")
+        exit(1)
     
     root = tree.getroot()
-    hits = root.findall("BlastOutput_iterations/Iteration/Iteration_hits/Hit")
+    iteration_hits = root.findall("BlastOutput_iterations/Iteration/Iteration_hits")
+    if len(iteration_hits) == 0:
+        print("Error: XML file is not a BLAST output")
+        exit(1)
+        
+    hits = iteration_hits[0].findall("Hit")
+    if(len(hits) == 0): 
+        print("XML has no hits")
+        exit(1)
 
     matched = []
 
@@ -24,8 +33,11 @@ def find_pattern(file, pattern):
             
     if(len(matched) == 0): 
         print(f"Pattern {pattern} not found in {file}")
+        exit()
     else: 
-        print(matched)
+        print(f"Found {len(matched)} matches")
+        for match in matched:
+            print(f"{match}\n")
 
 if __name__ == '__main__':
 
@@ -37,6 +49,6 @@ if __name__ == '__main__':
     args = parser.parse_args() 
 
     if args.input[-4:] != ".xml": 
-        raise Exception("Please enter .xml file to search pattern") 
-    
+        print("Error: Please enter .xml file to search pattern") 
+        exit(1)
     find_pattern(args.input, args.pattern)
