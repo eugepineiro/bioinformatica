@@ -57,13 +57,13 @@ optional arguments:
   -h, --help            show this help message and exit
   --input path/to/file  path to the sequence to BLAST
   --output path/to/file path to folder to save BLAST output in .xml format. Defaults to create a /blast_output folder
-  --method blastn|blastp execute blastn or blastp. Defaults to blastn, blastp requires local swissprot database
+  --method blastn|blastp execute blastn or blastp. Defaults to blastn (online), blastp requires local swissprot database
 
 ```
 Ejemplo de ejecución para un archivo y un directorio con multiples archivos .fas
 ```
 python3 ./ej2.py --input orf/NM_000321.3/orf2_147.fas --output blast_results --method blastn 
-python3 ./ej2.py --input orf/NM_000321.3 --output blast_results --method blastn 
+python3 ./ej2.py --input orf/NM_000321.3 --output blast_results --method blastp 
 ```
 
 ### MSA
@@ -74,7 +74,7 @@ Para ejectuar Multiple Sequence Alignment con Muscle ejecutar:
 ```
 Para ejectuar Multiple Sequence Alignment con Clustawl ejecutar
 ```
-./ej3.py --input msa/multipleGaps.fas --output msa/alignedmultipleGapsMuscle --method clustalw 
+python3 ej3.py --input msa/multipleGaps.fasta --output msa/alignedmultipleGapsMuscle --method clustalw 
 ```
 
 ### Pattern Matching 

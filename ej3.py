@@ -13,7 +13,7 @@ class MSA(Enum):
 
 def isMethodInstalled(method):
   if method == MSA.CLUSTALW:
-    return which("clustalw") is not None
+    return which("clustalw2") is not None
   elif method == MSA.MUSCLE:
     return which("muscle") is not None
   else:
@@ -22,7 +22,7 @@ def isMethodInstalled(method):
 def msa(in_file, out_file, method):
   
   if method == MSA.CLUSTALW:
-    cline = ClustalwCommandline("clustalw",infile=in_file, outfile=out_file)
+    cline = ClustalwCommandline("clustalw2",infile=in_file, outfile=out_file)
 
   elif method == MSA.MUSCLE:
     command = ["muscle", "-align", in_file, "-output", out_file]
