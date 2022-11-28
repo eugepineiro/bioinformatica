@@ -11,13 +11,20 @@
 ### Requerimientos 
 ```
 Python3 
-Clustawl
+Clustalw
 Muscle
 Blast 
 ```
 Para instalar los modulos de Python necesarios ejectuar el siguiente comando:
 ```
 pip install requeriments.txt
+```
+
+Se puede ejecutar el programa en Docker que cuenta con Muscle, Clustalw, BLAST con Swissprot y Emboss con Prosite.
+```
+make docker
+make run
+make start
 ```
 
 ### Procesamiento de Secuencias 
@@ -53,9 +60,10 @@ optional arguments:
   --method blastn|blastp execute blastn or blastp. Defaults to blastn, blastp requires local swissprot database
 
 ```
-Ejemplo de ejecución
+Ejemplo de ejecución para un archivo y un directorio con multiples archivos .fas
 ```
-python3 ./ej2.py --input multiple.fas 
+python3 ./ej2.py --input orf/NM_000321.3/orf2_147.fas --output blast_results --method blastn 
+python3 ./ej2.py --input orf/NM_000321.3 --output blast_results --method blastn 
 ```
 
 ### MSA
@@ -66,25 +74,27 @@ Para ejectuar Multiple Sequence Alignment con Muscle ejecutar:
 ```
 Para ejectuar Multiple Sequence Alignment con Clustawl ejecutar
 ```
-./ej3.py --input msa/multipleGaps.dnd --output msa/alignedmultipleGapsMuscle --method clustalw 
+./ej3.py --input msa/multipleGaps.fas --output msa/alignedmultipleGapsMuscle --method clustalw 
 ```
 
 ### Pattern Matching 
 Buscar un patrón dentro de un resultado de BLAST
 
 ```
-usage: ej2.py [-h] --input file.xml --pattern pattern
+usage: ej4.py [-h] --input file.xml --pattern pattern [--search] [--output OUTPUT]
 
-Search pattern in blast output xml file
+Search pattern in blast output xml file and find fasta from accession number
 
 optional arguments:
   -h, --help         show this help message and exit
   --input file.xml   xml input file to search pattern
   --pattern pattern  pattern to search
+  --search           if true, get sequences from NCBI
+  --output OUTPUT    output directory for sequences
 ```
 Ejemplo de ejecución
 ```
-python3 ./ej4.py --input blast/nuc_orf0_2787.fas.xml --pattern homo
+python3 ./ej4.py --input blast/nuc_orf0_2787.fas.xml --pattern homo --search
 ```
 
 ### Emboss 

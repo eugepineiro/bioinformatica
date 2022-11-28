@@ -59,7 +59,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     try:
-        records =  SeqIO.parse(args.input, "genbank") # Parse genbank file
+        records = SeqIO.parse(args.input, "genbank") # Parse genbank file
     except OSError as e:
         print(f"Error: Unable to open {args.input}: {e}")
         exit(1)

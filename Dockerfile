@@ -30,6 +30,8 @@ RUN tar -xvzf "clustalw-2.1-linux-x86_64-libcppstatic.tar.gz"
 #move clustalw2 to /usr/local/bin
 RUN mv clustalw-2.1-linux-x86_64-libcppstatic/clustalw2 /usr/local/bin/clustalw2
 
+#make clustalw2 executable
+RUN chmod +x /usr/local/bin/clustalw2
 
 #download blast from ncbi
 RUN wget "https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.13.0+-x64-linux.tar.gz"
@@ -51,3 +53,17 @@ RUN "makeblastdb" -in swissprot -dbtype prot
 
 #install emboss
 RUN apt-get install -y emboss
+
+#download prosite database
+RUN wget "ftp://ftp.expasy.org/databases/prosite/prosite.dat"
+RUN wget "ftp://ftp.expasy.org/databases/prosite/prosite.doc"
+
+#makedir db
+RUN mkdir db
+
+#move prosite database to db
+RUN mv prosite.dat db/
+RUN mv prosite.doc db/
+
+#extract prosite database
+RUN prosextract -prositedir db

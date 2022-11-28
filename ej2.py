@@ -5,24 +5,10 @@ from Bio import SeqIO
 import threading
 import argparse
 
-#orf_directory = "orf/NM_000321.3/"
-#protein_directory = "protein/orf/NM_000321.3/"
-def online_blastn_old(file):
-    print("online blastn for " + file)
-    #open file
-    with open(args.input + file, "r") as f:
-        #read file
-        seq = f.read()
-        #blast seq
-        result = NCBIWWW.qblast("blastn", "nt", seq)
-        #save blast result
-        with open("blast/nuc_" + file + ".xml", "w") as f:
-            f.write(result.read())#iterate over dir
-
-
 def online_blastn(file):
     try:
-        seq = SeqIO.read(args.input + file, format="fasta") # Read sequence
+        filepath = f"{args.input}/{file}" if is_dir(args.input) else args.input
+        seq = SeqIO.read(filepath, format="fasta") # Read sequence
     except OSError as e:
         print(f"Error: Unable to open {args.input}: {e}")
         exit(1)
@@ -43,7 +29,8 @@ def online_blastn(file):
 def local_blastp(file):
     # Translate ORF to protein
     try:
-        record = SeqIO.read(args.input + file, format="fasta")# Read sequence
+        filepath = f"{args.input}/{file}" if is_dir(args.input) else args.input
+        record = SeqIO.read(filepath, format="fasta")# Read sequence
     except OSError as e:
         print(f"Error: Unable to open {args.input}: {e}")
         exit(1)
@@ -56,6 +43,7 @@ def local_blastp(file):
     # Save protein sequence
     name = file.split(".")[0]
     path = f"{args.output}/{name}_protein.fasta"
+    os.makedirs(args.output, exist_ok=True)
     with open(path, "w") as f:
         print(f"Saving results in {path}")
         f.write(f">{record.id}\n")
@@ -69,18 +57,39 @@ def local_blastp(file):
         print("Error: Local BLASTP failed. Please make sure you've got swissprot database installed")
         exit(1)
 
+def is_file(path):
+    return os.path.isfile(path)
+
+def is_dir(path):
+    return os.path.isdir(path)
+
 def run_blast(target):
-    
+        
         threads = []
-    
-        for file in os.listdir(args.input):
+
+        input_path = args.input
+
+        if is_file(input_path):
+            print("Running BLAST for single file")
+            target(input_path)
+            return
+        
+        if not is_dir(input_path):
+            print(f"Error: {input_path} is not a file or directory")
+            exit(1)
+
+        files = os.listdir(input_path)
+        for file in files:
             print(f"BLAST for file {file}")
             t = threading.Thread(target=target, args=(file,)) # Multithreading to speed up process
             t.start()
             threads.append(t)
     
-        for t in threads:
-            t.join()  # Wait for thread to finish
+        for i,t in enumerate(threads):
+            try:
+                t.join()
+            except:
+                print(f"Error: BLAST failed for file {files[i]}")
 
 
 

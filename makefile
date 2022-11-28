@@ -1,6 +1,8 @@
 
 docker:
 	docker build -t biotp .
+	
+run:
 	docker run -v ${PWD}:/root/bio -w /root/bio --name bio_container -it biotp
 
 start:

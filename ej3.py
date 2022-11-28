@@ -1,35 +1,48 @@
 from Bio import SeqIO, AlignIO, Seq, SeqRecord
 from Bio.Align.Applications import ClustalwCommandline
+from Bio.Application import ApplicationError
 from Bio.Align.Applications import MuscleCommandline
 import argparse
 from enum import Enum
-import os
-
+import subprocess
+from shutil import which
 
 class MSA(Enum):
     CLUSTALW = 1
     MUSCLE = 2
-    
+
+def isMethodInstalled(method):
+  if method == MSA.CLUSTALW:
+    return which("clustalw") is not None
+  elif method == MSA.MUSCLE:
+    return which("muscle") is not None
+  else:
+    return False
+
 def msa(in_file, out_file, method):
   
   if method == MSA.CLUSTALW:
-    cline = ClustalwCommandline("clustalw2",infile=in_file, outfile=out_file)
+    cline = ClustalwCommandline("clustalw",infile=in_file, outfile=out_file)
 
   elif method == MSA.MUSCLE:
-    command = f"muscle -align {in_file} -output {out_file}"
-    cline = lambda  : os.system(command) 
+    command = ["muscle", "-align", in_file, "-output", out_file]
+    cline = lambda  : subprocess.run(command, check=True) 
     
   else: 
-    print("Error: Invalida MSA method")
+    print("Error: Invalid MSA method")
     exit(1)
 
   try:
+    if not isMethodInstalled(method):
+      print(f"Error: Unable to run {method.name}. Make sure is installed")
+      exit(1)
     cline()
+  except ApplicationError:
+    print(f"Error: Unable to run {method.name}. Make sure is installed")
+    exit(1)
   except OSError as e:
     print(f"Error: Unable to open {in_file}: {e}")
     exit(1)
-    
-
 
 if "__main__" == __name__:
 
@@ -42,9 +55,8 @@ if "__main__" == __name__:
   in_file = args.input
   out_file = args.output
 
-  extension = args.input.split(".")[1]
-
-  if extension != ".fas" or extension != ".fasta": 
+  extension = args.input.split(".")[-1]
+  if extension != "fas" and extension != "fasta": 
     print("Error: Please enter .fas or .fasta file") 
     exit(1)    
 

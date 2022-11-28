@@ -56,11 +56,11 @@ def search_by_accession(dir_name, query):
 if __name__ == '__main__':
 
     # Parse arguments 
-    parser = argparse.ArgumentParser(prog="ej2.py", description="Search pattern in blast output xml file")
+    parser = argparse.ArgumentParser(prog="ej4.py", description="Search pattern in blast output xml file and find fasta from accession number")
     parser.add_argument("--input", help="xml input file to search pattern", metavar="file.xml", type=str,required=True) #default="blast/orf0_2787.fas.xml"
     parser.add_argument("--pattern", help="pattern to search",  metavar="pattern", type=str, required=True)
-    parser.add_argument("--search", help="if true, get sequences from NCBI", type=bool, default=False, required=False)
-    parser.add_argument("--output-dir", dest="output_dir", help="output directory for sequences", type=str, default="entrez-sequences", required=False)
+    parser.add_argument("--search", help="if true, get sequences from NCBI", action="store_true", required=False)
+    parser.add_argument("--output", help="output directory for sequences", type=str, default="entrez-sequences", required=False)
 
     args = parser.parse_args() 
 
@@ -68,11 +68,12 @@ if __name__ == '__main__':
     if args.input[-4:] != ".xml": 
         print("Error: Please enter .xml file to search pattern") 
         exit(1)
-        
+    
     hits = find_pattern(args.input, args.pattern)
 
     # Search by accession 
     if args.search:
-        os.makedirs(args.output_dir, exist_ok=True)
+        os.makedirs(args.output, exist_ok=True)
         for hit in hits:
-            search_by_accession(args.output_dir, hit[1]) # Cant do multithreading cause NCBI does not accept too many requests
+            print(f"Searching for {hit[1]} in NCBI...")
+            search_by_accession(args.output, hit[1]) # Cant do multithreading cause NCBI does not accept too many requests
