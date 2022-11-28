@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import argparse
-
+from Bio import Entrez
+import os
 
 def find_pattern(file, pattern):
 
@@ -38,17 +39,40 @@ def find_pattern(file, pattern):
         print(f"Found {len(matched)} matches")
         for match in matched:
             print(f"{match}\n")
+        return matched
 
+def search_by_accession(dir_name, query):
+    Entrez.email = 'A.N.Other@example.com'
+    fasta = Entrez.efetch(db="nucleotide", id=query, rettype="fasta")
+    # Save fasta in a file   
+    try: 
+        with open(f"{dir_name}/{query}.fas" , "w") as f:
+            f.write(f"{fasta.read()}") # Create sequence ID
+    except OSError as e:
+        print(f"Error: Unable to write {dir_name}/{query}.fas: {e}")
+        exit(1)      
+        
+        
 if __name__ == '__main__':
 
     # Parse arguments 
     parser = argparse.ArgumentParser(prog="ej2.py", description="Search pattern in blast output xml file")
     parser.add_argument("--input", help="xml input file to search pattern", metavar="file.xml", type=str,required=True) #default="blast/orf0_2787.fas.xml"
     parser.add_argument("--pattern", help="pattern to search",  metavar="pattern", type=str, required=True)
+    parser.add_argument("--search", help="if true, get sequences from NCBI", type=bool, default=False, required=False)
+    parser.add_argument("--output-dir", dest="output_dir", help="output directory for sequences", type=str, default="entrez-sequences", required=False)
 
     args = parser.parse_args() 
 
+    # Search Pattern 
     if args.input[-4:] != ".xml": 
         print("Error: Please enter .xml file to search pattern") 
         exit(1)
-    find_pattern(args.input, args.pattern)
+        
+    hits = find_pattern(args.input, args.pattern)
+
+    # Search by accession 
+    if args.search:
+        os.makedirs(args.output_dir, exist_ok=True)
+        for hit in hits:
+            search_by_accession(args.output_dir, hit[1]) # Cant do multithreading cause NCBI does not accept too many requests
