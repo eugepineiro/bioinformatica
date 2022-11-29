@@ -1,6 +1,6 @@
-# Bioinformatica 
+# Bioinformática 
 
-## Análisis de Retinblastoma Gen RB1
+## Análisis de Retinoblastoma Gen RB1
 
 ### Integrantes 
 - Corfdir, Yohann                     
